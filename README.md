@@ -1,8 +1,8 @@
-# 3TEL → 4TEL · iki1uc · Segment‑System
+# 4TEL · iki1uc · Segment‑System
 
 Dieses Modul bildet aus drei Segmenten (3TEL) ein neues viertes Segment (4TEL).
-Es nutzt die iki1uc‑Symbolmatrix, NC.link‑Routing, FullSync‑Mechanik,
-GEO‑Physik, WETTE, SLIDE und SCORE.
+4TEL ist die erweiterte Syntheseeinheit des iki1uc‑Systems und dient als
+Basis für GEO‑Physik, Energie‑Felder, Impuls‑Vektoren und Routing‑Strukturen.
 
 ---
 
@@ -74,7 +74,7 @@ Diese drei Elemente bilden die **tri‑Basis**.
 
 Die FullSync‑Mechanik erzeugt aus 3TEL ein neues 4TEL:
 
-ARG + XARG + ARG3TE → FullSync → neues 4TEL
+ARG + XARG + ARG3TE → FullSync → 4TEL
 
 
 Beispiel:  
@@ -82,28 +82,31 @@ Beispiel:
 
 Das vierte Element ist der **Zentralknoten (◎)**.
 
+4TEL ist damit die **erweiterte Einheit**, die Routing, Physik und GEO‑Felder trägt.
+
 ---
 
-## 5. GEO‑Physik
+## 5. 4TEL‑Physik
 
-Aus dem 3TEL werden GEO‑Werte berechnet:
+Aus dem 4TEL werden GEO‑Werte berechnet:
 
 - α = erster Wert  
 - β = zweiter Wert  
 - γ = dritter Wert  
-- δ = Rückführungswert
+- δ = vierter Wert (Zentralknoten)
 
 Physikalische Felder:
 
 - Energie = α × 9.81  
 - Impuls = β × γ  
 - Feld = γ × 42  
+- Zentrumskraft = δ × 108  
 
 ---
 
 ## 6. WETTE · SLIDE · SCORE
 
-Diese drei Faktoren beeinflussen die GEO‑Physik:
+Diese drei Faktoren beeinflussen die 4TEL‑Physik:
 
 ### WETTE  
 Verstärkt die GEO‑Werte (Multiplikation)
@@ -123,6 +126,7 @@ Alle drei wirken direkt auf:
 - Energie  
 - Impuls  
 - Feld  
+- Zentrumskraft  
 
 ---
 
@@ -144,7 +148,7 @@ Das Routing erfolgt über:
 | 3TEL.pipe | GEO‑Physik + 4TEL‑Synthese |
 | 3TEL.respo.js | Ausgabe / Artikulation |
 | Final.html | Vollansicht GEO + Physik |
-| index.html | Startseite (WETTE, SLIDE, SCORE, 3TEL‑Output) |
+| index.html | Startseite (WETTE, SLIDE, SCORE, 4TEL‑Output) |
 | NC.link | Routing |
 | NCLinkFullSync.js | FullSync‑Mechanik |
 
@@ -152,25 +156,24 @@ Das Routing erfolgt über:
 
 ## 9. Beispiel‑Output
 
-3TEL: 3 → 9 → 81
 4TEL: 3 → 9 → 81 → ◎
 
 GEO:
-α = 3
-β = 9
-γ = 81
-δ = 1
+α = 3  
+β = 9  
+γ = 81  
+δ = 1  
 
 Physik:
-Energie = 29.43
-Impuls = 729
-Feld = 3402
+Energie = 29.43  
+Impuls = 729  
+Feld = 3402  
+Zentrumskraft = 108  
 
 GAMMA:
-Value = 9
-Percent = 100%
+Value = 9  
+Percent = 100%  
 Degree = 360°
-
 
 ---
 
@@ -197,11 +200,15 @@ Dieses Modul erzeugt:
 - GEO‑Physik  
 - Energie‑Felder  
 - Impuls‑Vektoren  
+- Zentrumskräfte  
 - Segment‑Routing  
 - artikulierte RESPO‑Ausgabe  
 
-Es ist die Grundlage des iki1uc‑Segment‑Systems.
+Es ist die Grundlage des iki1uc‑4TEL‑Systems.
 
-License
+---
 
-MIT — free to use and modify. Author credit (© iki1uc wieimmer) must be retained per the license terms. See LICENSE.
+## License
+
+MIT — free to use and modify.  
+Author credit (© iki1uc wieimmer) must be retained per the license terms.
