@@ -1,0 +1,18 @@
+// 4TEL.pipe.js
+import { TEL3 } from "./3TEL.js";
+import { VEKTEL } from "./VEKTEL.js";
+
+export const TEL4_PIPE = {
+  id: "4TEL.pipe",
+  mode: "quad-transfer",
+  status: "active",
+
+  run(segment) {
+    const tri = TEL3.tri(segment);
+    const quad = TEL3.quad(tri);
+
+    const vectors = VEKTEL.build(tri, quad);
+
+    return { tri, quad, vectors };
+  }
+};
