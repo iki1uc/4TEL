@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>3TEL – PX‑Gate Animation</title>
+<title>4TEL – PX‑Gate Quadrant</title>
 <style>
 body { background:#000; color:#0f0; font-family:monospace; }
 #anim { font-size:32px; text-align:center; margin-top:100px; }
@@ -11,17 +11,28 @@ body { background:#000; color:#0f0; font-family:monospace; }
 
 <body>
 
-<div id="anim">PX‑Gate lädt…</div>
+<div id="anim">PX‑Gate Quadrant lädt…</div>
 
 <script type="module">
 import { TEL3 } from "./3TEL.js";
 
-const tri = TEL3.tri("PER");
+const QUAD4 = {
+  Q1: TEL3.tri("PER"),
+  Q2: TEL3.tri("PER"),
+  Q3: TEL3.tri("PER"),
+  Q4: TEL3.tri("PER")
+};
 
+let q = 1;
 let i = 0;
+
 setInterval(() => {
-  document.getElementById("anim").innerText = tri[i];
-  i = (i + 1) % tri.length;
+  const seg = QUAD4["Q" + q];
+  document.getElementById("anim").innerText = seg[i];
+
+  i = (i + 1) % seg.length;
+  if (i === 0) q = (q % 4) + 1;
+
 }, 600);
 </script>
 
